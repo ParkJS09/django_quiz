@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'quiz',
     'rest_framework',
-    'whitenoise.middleware.WhiteNOISEMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 MIDDLEWARE = [
@@ -84,7 +84,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age = 500)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 
@@ -126,3 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
